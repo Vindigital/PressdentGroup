@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pressdent Group - Escanea el QR</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dorado: #b89146;
+      --dorado-texto: #a37b33;
+      --gris-oscuro: #3e3f42;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #070707;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .qr-card {
+      width: 100%;
+      max-width: 400px;
+      background: #fafafa;
+      border-radius: 24px;
+      box-shadow:
+        0 0 0 1px rgba(255,215,120,.25),
+        0 15px 45px rgba(0,0,0,.25),
+        0 0 25px rgba(200,162,76,.20);
+      overflow: hidden;
+      text-align: center;
+      padding: 40px 30px;
+    }
+
+    .brand-title {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #63666a;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+    }
+
+    .brand-subtitle {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 1rem;
+      letter-spacing: 6px;
+      color: #FF8000;
+      margin-bottom: 25px;
+    }
+
+    .qr-frame {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 16px;
+      display: inline-block;
+      margin-bottom: 22px;
+    }
+
+    .qr-frame img {
+      width: 220px;
+      height: 220px;
+      display: block;
+    }
+
+    .qr-instruction {
+      font-size: 0.95rem;
+      color: #555555;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .qr-instruction span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: var(--dorado-texto);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="qr-card">
+    <h1 class="brand-title">Pressdent</h1>
+    <div class="brand-subtitle">G r o u p</div>
+
+    <div class="qr-frame">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgAQMAAADhvpQrAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADZklEQVR4nO3cPVbjMBQGUM2ZIiVL8FK8tHhpXoqXkJKCgybEOvpxlIADTAH3q4L1pKvyHSE7BBH5TRljNy+54O/5rymEp/X5vD7slR9vrwSBQCAQCAQC+VnIKWwy5FmnjJzzp5m81EMhl3dXgkAgEAgEAoFAHkGq+WWoybkXfl1/HbZIs6fuShAIBAKBQCAQyJchx/xsyke2vZ1AIBAIBAKBQCD/EQmXpduu+Fz+HC43C5b1wboTCAQCgUAgEAjkG5A2Q90Ll1+va3ma3yu/tRIEAoFAIBAIBLIb6aXMKu9pJaT0wlc3C26tBIFAIBAIBAKB7EPup9wnKG3uYX2wvDv5o4FAIBAIBAKBQLYZ4ybh0tyWtKexY12Uhpa7DTMEAoFAIBAIBLIfaVLa3PJBq3Z+SilqdpIy57qhc2QLgUAgEAgEAvkJyK03/U81VxWVTLmrvdrJNhAIBAKBQCAQyEeR8VKQhg6xfjvqWP+rvz0oXXPVC5/yTnpHthAIBAKBQCAQyEeRkC+gzvnINuaD1jQ01bdU20yhStlJbLYLgUAgEAgEAoHsQ8bcwc6dXrhwpTy1uXcy5/JhnQ+BQCAQCAQCgXweGepe+CVzsRTFjh+2DXOzNQgEAoFAIBAIZAdShub6WfueVqzvGLRFJdN2pdi/WQCBQCAQCAQCgbyLjJ35w3ZWrO+2lqQ2ednOH9fh5gEEAoFAIBAIBPIQMubJS6cDvmpzY6c85qL28BcCgUAgEAgEAvk8kjKFNm0vvORz3aFzxyAhIS8NgUAgEAgEAoE8hIR8t7XML3lqvhQQ80Ht8fJHQdJV2reUIggEAoFAIBDIT0VShvoVqhg3//5/S1M0xE3m7XtWEAgEAoFAIBDIPuROjh1/3H6Qaqq5cOMCKwQCgUAgEAgEsg8Ztw/L0HHzq/1y/9ApOjVIszUIBAKBQCAQCGQfcv/ItsxP5c9NbUHWPHazAAKBQCAQCAQC6SBtBzvUS7cv8V9lun2zoKwEgUAgEAgEAoF8AzLV72ld3SwouXqZK0IgEAgEAoFAIF+PxPo0NuWwLVpuN8zLOgUCgUAgEAgEAnkEaVPmp6FjXZSQkIdiXZ62mxpmCAQCgUAgEAjkUaSXMqttc+f6C64JWXLRVVcdIBAIBAKBQCCQRxAR+T35B6dsKLjtnsrGAAAAAElFTkSuQmCC" alt="Código QR - Escanea para ver la tarjeta de presentación de Pressdent Group" />
+    </div>
+
+    <p class="qr-instruction">
+      Escanea el código con la cámara de tu celular
+      <span>para ver la tarjeta digital</span>
+    </p>
+  </div>
+
+</body>
+</html>
